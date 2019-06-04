@@ -1,10 +1,24 @@
-fetch('http://gamma.apexcode.ro/api/products')
-.then((resp) => resp.json())
-.then((resp) => {
-    resp.forEach(products => {
-        document.getElementById('content').innerHTML += `<div><h3>${products.Name}</h3><p>${products.ProductType}</p></div>`
-    });
-})
+function fetchProd() {
+  fetch('http://gamma.apexcode.ro/api/products')
+    .then(resp => resp.json())
+    .then(renderProd)
+}
+const prodCollection = document.getElementById('prod-collection')
+function renderProd(prod) {
+  prodCollection.innerHTML = ""
+  prod.forEach(function (prod) {
+    prodCollection.innerHTML += `
+ <div class="card" data-id=${prod.Id}>
+      <h2>${prod.Name}</h2>
+      <p>${prod.ProductType}</p>
+      <button class="delete-btn">Delete</button>
+ </div>
+`
+  })
+}
+fetchProd();
+
+// adaugare supplier
 
 document.getElementById("save").addEventListener('click', addProduct);
 
@@ -27,10 +41,22 @@ function addProduct() {
     },
     body: JSON.stringify(product)
   })
-    .then(function (response) {
-      console.log(response.statusText);
-    });
+    .then(response => response.json())
+    .then(fetchCustomer)
 
 }
 
+// delete supplier
 
+
+document.getElementById('prod-collection').addEventListener('click', function (event) {
+  let delButton = event.target.className === "delete"
+  if (delButton) {
+    let id = event.target.parentElement.dataset.id
+    fetch(`http://gamma.apexcode.ro/api/products/${id}`, {
+      method: 'DELETE'
+    })
+      .then(response => response.json())
+      .then(fetchProd)
+  }
+})
