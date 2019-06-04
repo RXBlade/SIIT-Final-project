@@ -11,7 +11,7 @@ function renderProd(prod) {
  <div class="card" data-id=${prod.Id}>
       <h2>${prod.Name}</h2>
       <p>${prod.ProductType}</p>
-      <button class="delete-btn">Delete</button>
+      <button class="delete">Delete</button>
  </div>
 `
   })
@@ -42,7 +42,7 @@ function addProduct() {
     body: JSON.stringify(product)
   })
     .then(response => response.json())
-    .then(fetchCustomer)
+    .then(fetchProd)
 
 }
 

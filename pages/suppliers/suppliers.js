@@ -42,7 +42,7 @@ function addSupplier() {
     body: JSON.stringify(supplier)
   })
     .then(response => response.json())
-    .then(fetchCustomer)
+    .then(fetchSup)
 }
 
 // delete supplier
