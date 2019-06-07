@@ -5,3 +5,22 @@ html, body {
 #outer {
     flex-direction: column;
 }
+
+.noStyle {
+    width: 10px;
+}
+
+.serieStyle {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;
+    font-weight: 400;
+}
+
+#save-invoice {
+    display: none;
+}
+
+#cancel-invoice {
+    display: none;
+}
