@@ -9,7 +9,7 @@ function renderSup(sup) {
   sup.forEach(function (sup) {
     supCollection.innerHTML += `
  <div class="card" data-id=${sup.Id}>
-      <h2>${sup.Name}</h2>
+      <p class="title-name">${sup.Name}</p>
       <p>${sup.CUI}</p>
       <button class="delete">Delete</button>
  </div>

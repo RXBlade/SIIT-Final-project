@@ -9,7 +9,7 @@ function renderCustomer(cus) {
     cus.forEach(function (cus) {
         cusCollection.innerHTML += `
    <div class="card" data-id=${cus.Id}>
-        <h2>${cus.Name}</h2>
+        <p class="title-name">${cus.Name}</p>
         <p>${cus.CUI}</p>
         <button class="delete">Delete</button>
    </div>

@@ -10,6 +10,15 @@
     <title>Invoice</title>
 </head>
 <body>
+    <nav class="topnav">
+        <div>
+            <a href="/index.html">Home</a>
+            <a class="active" href="/pages/invoice/invoice.html">Invoices</a>
+            <a href="/pages/products/products.html">Products</a>
+            <a href="/pages/customers/customers.html">Customers</a>
+            <a href="/pages/suppliers/suppliers.html">Suppliers</a>
+        </div>
+    </nav>
     <div class="container center">
         <h2 class="row">Invoice</h2>
         <div class="row">
@@ -37,14 +46,15 @@
                     <th>Price</th>
                     <th>Value</th>
                     <th>VAT</th>
-                    <th>
-                        <a class="waves-effect waves-light btn green">
-                            <i class="material-icons left">new</i>NEW POST
-                        </a>
-                    </th>
                 </tr>
             </tbody>
         </table>
+        
+         <!--Add Another Product button -->
+        <a class="new-post-btn waves-effect waves-light btn green">
+            <p class="material-icons left"></p>Add Another Product
+        </a>
+        
         <h5 id="total" class="right">Total: </h5>
         <br><br><br><br>
         <div id="foo row center">
@@ -61,6 +71,6 @@
         <footer></footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="invoice.js" />
+    <script src="invoice.js"></script>
 </body>
 </html>

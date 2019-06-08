@@ -9,7 +9,8 @@ function renderProd(prod) {
   prod.forEach(function (prod) {
     prodCollection.innerHTML += `
  <div class="card" data-id=${prod.Id}>
-      <h2>${prod.Name}</h2>
+      <p class="title-name">${prod.Name}</p>
+      <p class="type-text">TYPE</p> 
       <p>${prod.ProductType}</p>
       <button class="delete-btn">Delete</button>
  </div>
