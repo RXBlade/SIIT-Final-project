@@ -55,10 +55,10 @@ fetch(`${apexAPI}invoices/1/items`)
             ${(item.VAT * 100) / value}
         </td>
         <td>
-            <a id="" class="waves-effect waves-light btn orange">
+            <a id="edit-post" class="waves-effect waves-light btn orange">
                 <i class="material-icons left">edit</i>EDIT
             </a>
-            <a id="" class="waves-effect waves-light btn red">
+            <a id="delete-post" class="waves-effect waves-light btn red">
                 <i class="material-icons left">delete</i>DELETE
             </a>
         </td>
