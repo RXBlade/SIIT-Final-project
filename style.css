@@ -76,11 +76,12 @@ html, body {
 }
 
 .card {
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgb(196, 196, 196);
+    padding: 20px 30px;
+    /* border-bottom: 1px solid rgb(196, 196, 196); */
+    background-color: rgb(241, 241, 241);  
     box-shadow: none;
     width: 500px;
-
+    border-radius: 12px;
 }
 
 .new-post-btn {
@@ -107,6 +108,7 @@ html, body {
 
 .product-title {
     font-size: 24px;
+    margin: 0px !important;
 }
 
 .products-inputs {
