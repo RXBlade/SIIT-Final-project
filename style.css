@@ -80,6 +80,18 @@ html, body {
 
 }
 
+#new-post {
+    display: none;
+}
+
+#edit-post {
+    display: none;
+}
+
+#delete-post {
+    display: none;
+}
+
 /* .edit-btn {
     background-color: #fff !important;
 }
