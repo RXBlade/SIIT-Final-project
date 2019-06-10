@@ -15,23 +15,28 @@
     <nav class="topnav">
         <div>
             <a href="/index.html">Home</a>
-            <a href="/pages/invoice/invoice.html">Invoices</a>
             <a href="/pages/products/products.html">Products</a>
             <a class="active" href="/pages/customers/customers.html">Customers</a>
             <a href="/pages/suppliers/suppliers.html">Suppliers</a>
         </div>
     </nav>
-    <form id="addpost">
-        <div class="form-group">
-            <input class="form-control" type="text" id="name" placeholder="Customers">
-        </div>
-        <div class="form-group">
-            <input class="form-control" type="text" id="details" placeholder="CUI">
-        </div>
-    </form>
-    <button id="save">Save</button>
-    <div id="collection"></div>
+    <main class="page-main">
+        <div id="collection"></div>
 
+        <div>
+            <form id="addpost">
+                <p>Add a new Customer to the list</p>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="name" placeholder="Customers">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="details" placeholder="CUI">
+                </div>
+            </form>
+            <button id="save">Save</button>
+        </div>
+    </main>
+    
     <script type = "text/javascript" src = "/pages/utils.js" ></script>
     <script src="customers.js"></script>
 </body>

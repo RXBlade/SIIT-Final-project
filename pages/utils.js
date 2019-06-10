@@ -13,15 +13,15 @@ function render(data, type) {
     if (type == 'product'){
     Collection.innerHTML += `
    <div class="card" data-id=${item.Id}>
-        <h2>${item.Name}</h2>
-        <p>${item.ProductType}</p>
+        <h2 class="product-title">${item.Name}</h2>
+        <p>Type: ${item.ProductType}</p>
         <button class="delete">Delete</button>
    </div>
   `}
   else if (type == 'customer' || 'supplier'){
     Collection.innerHTML += `
    <div class="card" data-id=${item.Id}>
-        <h2>${item.Name}</h2>
+        <h2 class="product-title">${item.Name}</h2>
         <p>${item.CUI}</p>
         <button class="delete">Delete</button>
    </div>

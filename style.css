@@ -1,6 +1,7 @@
 .valign-wrapper {
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 html, body {
@@ -42,6 +43,7 @@ html, body {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 
 }
 
@@ -124,4 +126,21 @@ html, body {
 .title-name {
     font-size: 20px;
     font-weight: 600;
+}
+
+.product-title {
+    font-size: 24px;
+}
+
+.products-inputs {
+    max-width: 500px;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.page-main {
+    display: flex;
+    justify-content: space-around;
 }
