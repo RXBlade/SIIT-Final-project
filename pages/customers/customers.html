@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Customer</title>
+    <title>Customers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
+<body class="list-page">
     <nav class="topnav">
         <div>
             <a href="/index.html">Home</a>
@@ -20,12 +20,13 @@
             <a href="/pages/suppliers/suppliers.html">Suppliers</a>
         </div>
     </nav>
+    <h1 class="row center page-title">Customers</h1>
     <main class="page-main">
         <div id="collection"></div>
 
         <div>
             <form id="addpost">
-                <p>Add a new Customer to the list</p>
+                <p>Add a New Customer to the list</p>
                 <div class="form-group">
                     <input class="form-control" type="text" id="name" placeholder="Customers">
                 </div>
@@ -33,7 +34,7 @@
                     <input class="form-control" type="text" id="details" placeholder="CUI">
                 </div>
             </form>
-            <button id="save">Save</button>
+            <button class="col s6 waves-effect waves-light btn-large green" id="save">Save</button>
         </div>
     </main>
     

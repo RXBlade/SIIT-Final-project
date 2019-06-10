@@ -15,15 +15,15 @@ function render(data, type) {
    <div class="card" data-id=${item.Id}>
         <h2 class="product-title">${item.Name}</h2>
         <p>Type: ${item.ProductType}</p>
-        <button class="delete">Delete</button>
+        <button class="col s6 waves-effect waves-light btn-large orange delete-button">Delete</button>
    </div>
   `}
   else if (type == 'customer' || 'supplier'){
     Collection.innerHTML += `
    <div class="card" data-id=${item.Id}>
         <h2 class="product-title">${item.Name}</h2>
-        <p>${item.CUI}</p>
-        <button class="delete">Delete</button>
+        <p>CUI: ${item.CUI}</p>
+        <button class="col s6 waves-effect waves-light btn-large orange delete-button">Delete</button>
    </div>
   `
   }

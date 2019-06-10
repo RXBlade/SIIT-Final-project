@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Product</title>
+    <title>Products</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,12 +21,13 @@
             <a href="/pages/suppliers/suppliers.html">Suppliers</a>
         </div>
     </nav>
+    <h1 class="row center page-title">Products</h1>
     <main class="page-main">
         <div id="collection"></div>
         
         <div>
             <form id="addpost">
-                <p>Add a new Product to the list</p>
+                <p>Add a New Product to the list</p>
                 <div class="form-group">
                     <input class="form-control products-inputs" type="text" id="name" placeholder="Name">
                 </div>
@@ -34,7 +35,7 @@
                     <input class="form-control products-inputs" type="text" id="details" placeholder="Type">
                 </div>
             </form>
-            <button id="save">Save</button>
+            <button class="col s6 waves-effect waves-light btn-large green" id="save">Save</button>
         </div>
     </main>
     <script type = "text/javascript" src = "/pages/utils.js" ></script>
