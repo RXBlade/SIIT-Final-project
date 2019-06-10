@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body class="valign-wrapper">
+<body>
     <nav class="topnav">
         <div>
-            <a class="active" href="/index.html">Home</a>
+            <a href="/index.html">Home</a>
             <a href="/pages/invoice/invoice.html">Invoices</a>
             <a href="/pages/products/products.html">Products</a>
-            <a href="/pages/customers/customers.html">Customers</a>
+            <a class="active" href="/pages/customers/customers.html">Customers</a>
             <a href="/pages/suppliers/suppliers.html">Suppliers</a>
         </div>
     </nav>
-    <div id="outer" class="container valign-wrapper">
-        <h2 class="row">Invoices</h2>
-            <div id="inner" class="">
-                <ul id="invoiceList" class="collection col s10"></ul>
-            </div>
-        <p id="total" class="row"></p>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+    <form id="addpost">
+        <div class="form-group">
+            <input class="form-control" type="text" id="name" placeholder="Customers">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" id="cui" placeholder="CUI">
+        </div>
+    </form>
+    <button id="save">Save</button>
+    <div id="cus-collection"></div>
 
+    <script src="utils.js"></script>
+    <script src="customers.js"></script>
+</body>
+
+</html>

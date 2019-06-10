@@ -2,18 +2,40 @@ var urlParams = new URLSearchParams(location.search);
 const urlId = urlParams.get('id');
 const urlSeries = urlParams.get('series');
 const urlNumber = urlParams.get('number');
+const urlDate = urlParams.get('date');
+const urlCustomer = urlParams.get('customerId');
+const urlSupplier = urlParams.get('supplierId');
+const apexAPI = 'http://alpha.apexcode.ro/api/';
 var id = 1;
 
-fetch(`http://gamma.apexcode.ro/api/invoices/1/items`)
+fetch(`${apexAPI}suppliers/${urlSupplier}`)
 .then(resp => resp.json())
 .then(resp => {
-    
+    document.getElementById('supplier').innerHTML += 
+    `<p>Name: ${resp.Name}</p>
+    <p>CUI: ${resp.CUI}</p>`
+})
+
+fetch(`${apexAPI}customers/${urlCustomer}`)
+.then(resp => resp.json())
+.then(resp => {
+    document.getElementById('customer').innerHTML +=
+    `<p>Name: ${resp.Name}</p>
+    <p>CUI: ${resp.CUI}</p>`
+})
+
+fetch(`${apexAPI}invoices/1/items`)
+.then(resp => resp.json())
+.then((resp) => {
+    const sum = []
+    const reducer = (acc, curr) => acc + curr;
     document.getElementById('series').innerHTML = urlSeries;
     document.getElementById('number').innerHTML = urlNumber;
+    document.getElementById('date').innerHTML = urlDate;
     resp.forEach(item => {
         let value = item.Quantity * item.Price;
-        document.getElementById('main').innerHTML += 
-    `<tr id="trd + ${id}">
+        document.getElementById('main').innerHTML +=
+    `<tr>
         <td>
             ${id}
         </td>
@@ -32,10 +54,17 @@ fetch(`http://gamma.apexcode.ro/api/invoices/1/items`)
         <td>
             ${(item.VAT * 100) / value}
         </td>
-        <td><i class="material-icons">edit</i><i class="material-icons">close</i></td>
-
+        <td>
+            <a id="" class="waves-effect waves-light btn orange">
+                <i class="material-icons left">edit</i>EDIT
+            </a>
+            <a id="" class="waves-effect waves-light btn red">
+                <i class="material-icons left">delete</i>DELETE
+            </a>
+        </td>
     </tr>`
-    id++;    
+    sum.push(value)
+    id++;
     });
-    
+    document.getElementById('total').innerHTML += sum.reduce(reducer)
 })

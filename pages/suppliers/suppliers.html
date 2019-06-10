@@ -5,10 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>sup</title>
+<<<<<<< Updated upstream
+    <title>Suppliers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
+    <nav class="topnav">
+        <div>
+            <a href="/index.html">Home</a>
+            <a href="/pages/invoice/invoice.html">Invoices</a>
+            <a href="/pages/products/products.html">Products</a>
+            <a href="/pages/customers/customers.html">Customers</a>
+            <a class="active" href="/pages/suppliers/suppliers.html">Suppliers</a>
+        </div>
+    </nav>
     <form id="addpost">
         <div class="form-group">
             <input class="form-control" type="text" id="name" placeholder="Supplier">
@@ -18,8 +31,28 @@
         </div>
     </form>
     <button id="save">Save</button>
+=======
+    <title>sup</title>
+    <link rel="stylesheet" href="suppliers.css">
+</head>
 
-    <div id="sup-collection"></div>
+<body>
+    <div id="create">
+        <h2>Create Supplier</h2>
+        <form id="addpost">
+            <div class="form-group">
+                <input class="form-control" type="text" id="name" placeholder="Supplier">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="details" placeholder="CUI">
+            </div>
+        </form>
+        <button id="save">Save</button>
+    </div>
+    <div id="collection"></div>
+>>>>>>> Stashed changes
+
+    <script type="text/javascript" src="/pages/utils.js"></script>
     <script src="suppliers.js"></script>
 </body>
 

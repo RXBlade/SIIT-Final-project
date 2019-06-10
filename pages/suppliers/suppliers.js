@@ -1,62 +1,48 @@
-function fetchSup() {
-  fetch('http://gamma.apexcode.ro/api/suppliers')
-    .then(resp => resp.json())
-    .then(renderSup)
-}
-const supCollection = document.getElementById('sup-collection')
-function renderSup(sup) {
-  supCollection.innerHTML = ""
-  sup.forEach(function (sup) {
-    supCollection.innerHTML += `
- <div class="card" data-id=${sup.Id}>
-      <h2>${sup.Name}</h2>
-      <p>${sup.CUI}</p>
-      <button class="delete">Delete</button>
- </div>
-`
-  })
-}
-fetchSup();
-
-// adaugare supplier
-
-document.getElementById("save").addEventListener('click', addSupplier);
-function addSupplier() {
-  let name = document.getElementById('name').value;
-  let cui = document.getElementById('cui').value;
+<<<<<<< Updated upstream
 
 
-  var supplier = {
-    Name: name,
-    CUI: cui
-  };
+let type = 'supplier';
+fetchItems('http://gamma.apexcode.ro/api/suppliers', type);
 
-  fetch("http://gamma.apexcode.ro/api/suppliers", {
-    method: 'POST',
-    mode: 'cors',
-    cache: 'no-cache',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(supplier)
-  })
-    .then(response => response.json())
-    .then(fetchSup)
+
+document.getElementById("save").addEventListener('click', addItem);
+
+function addItem(){
+    let name = document.getElementById('name').value;
+    let details = document.getElementById('details').value;
+    let data = {
+        Name: name,
+        CUI: details
+      };
+
+    add(`http://gamma.apexcode.ro/api/suppliers`, data, type);
+
 }
 
-// delete supplier
+del(`http://gamma.apexcode.ro/api/suppliers`)
 
-document.getElementById('sup-collection').addEventListener('click', function (event) {
-  let delButton = event.target.className === "delete"
-  if (delButton) {
-    let id = event.target.parentElement.dataset.id
-    fetch(`http://gamma.apexcode.ro/api/suppliers/${id}`, {
-      method: 'DELETE'
-    })
-      .then(response => response.json())
-      .then(fetchSup)
-  }
-})
 
+
+=======
+
+let type = 'supplier';
+fetchItems('http://gamma.apexcode.ro/api/suppliers', type);
+
+
+document.getElementById("save").addEventListener('click', addItem);
+
+function addItem(){
+    let name = document.getElementById('name').value;
+    let details = document.getElementById('details').value;
+    let data = {
+        Name: name,
+        CUI: details
+      };
+
+    add(`http://gamma.apexcode.ro/api/suppliers`, data, type);
+
+}
+>>>>>>> Stashed changes
+
+del(`http://gamma.apexcode.ro/api/suppliers`)
 

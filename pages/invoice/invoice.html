@@ -6,32 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>Invoice</title>
 </head>
 <body>
-    <div class="container">
-        <h2 class="center row">Invoice</h2>
-        <table id="main">
-            <tr id="trh">
-                <th>No</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Value</th>
-                <th>VAT</th>
-                <th></th>
-            </tr>
-        </table>
-        <div class="">Supplier</div>
-        <div class="">
-            <h5>Series: <span id="series"></span></h5>
-            <h5>Number: <span id="number"></span></h5>
-            <h5>Date: <span id="date"></span></h5>
+<<<<<<< Updated upstream
+    <nav class="topnav">
+        <div>
+            <a href="/index.html">Home</a>
+            <a class="active" href="/pages/invoice/invoice.html">Invoices</a>
+            <a href="/pages/products/products.html">Products</a>
+            <a href="/pages/customers/customers.html">Customers</a>
+            <a href="/pages/suppliers/suppliers.html">Suppliers</a>
         </div>
-        <div class="">Customer</div>
-
+    </nav>
+=======
+>>>>>>> Stashed changes
+    <div class="container center">
+        <h2 class="row">Invoice</h2>
+        <div class="row">
+            <div id="supplier" class="col s4">
+                <a href="#" id="" class="col right">
+                    <i class="material-icons">add</i>
+                </a>
+                <h5>Supplier</h5>
+            </div>
+            <div class="col s4">
+                <p><span class="serieStyle">Series:</span> <span id="series"></span></p>
+                <p><span class="serieStyle">Number:</span> <span id="number"></span></p>
+                <p><span class="serieStyle">Date:</span> <span id="date"></span></p>
+            </div>
+            <div id="customer" class="col s4">
+                <h5>Customer</h5>
+            </div>
+        </div>
+        <table class="row">
+            <tbody id="main" class="center">
+                <tr>
+                    <th class="noStyle">No</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Value</th>
+                    <th>VAT</th>
+<<<<<<< Updated upstream
+                </tr>
+            </tbody>
+        </table>
+        
+         <!--Add Another Product button -->
+        <a class="new-post-btn waves-effect waves-light btn green">
+            <p class="material-icons left"></p>Add Another Product
+        </a>
+        
+=======
+                    <th>
+                        <a class="waves-effect waves-light btn green">
+                            <i class="material-icons left">new</i>NEW POST
+                        </a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+>>>>>>> Stashed changes
+        <h5 id="total" class="right">Total: </h5>
+        <br><br><br><br>
+        <div id="foo row center">
+            <a id="edit-invoice" class="col s6 waves-effect waves-light btn-large orange">
+                <i class="material-icons left">edit</i>EDIT INVOICE
+            </a>
+            <a id="save-invoice" class="col s6 waves-effect waves-light btn-large green">
+                <i class="material-icons left">check</i>SAVE
+            </a>
+            <a id="cancel-invoice" class="col s6 waves-effect waves-light btn-large orange">
+                <i class="material-icons left">cancel</i>CANCEL
+            </a>
+        </div>
+        <footer></footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<<<<<<< Updated upstream
     <script src="invoice.js"></script>
+=======
+    <script src="invoice.js" />
+>>>>>>> Stashed changes
 </body>
 </html>
